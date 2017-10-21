@@ -1,0 +1,49 @@
+{% extends 'Template/App.twig' %}
+
+{% block history %}
+
+<div class="comentario">
+<h2>{{history.titleHistory}}</h2>
+  <div class="fecha">{{history.create_At}}</div>
+
+  <div class="comentario-class">
+    {{history.historyContent}}</br></br>
+    <br>
+    <button onclick="voteHistory({{history.idHistory}}, 'dislikes')">dislike <span style="color:red" id='{{"dislikes" ~ history.idHistory}}'>{{dislikes}}</span></button>
+    <button onclick="voteHistory({{history.idHistory}}, 'likes')">likes <span style="color:red" id="{{"likes" ~ history.idHistory}}">{{likes}}</span> </button>
+  </div>
+
+  <select name="organizeFor">
+    <option value="Categoria1">Mas likes</option>
+    <option value="Categoria2">Menos likes</option>
+  </select>
+  </br></br></br>
+
+<h2>Comentarios</h2>
+
+<form class="" action="" method="post" id="newComment">
+  <input type="hidden" name="idHistory" value="{{history.idHistory}}">
+  <textarea placeholder="Unete a la conversación" name="comment" id="comment" required></textarea>
+
+  <input type="submit" name="commentSubmit" value="publica tu comentario">
+</form>
+
+</div>
+
+  {% for comment in comments %}
+  <div class="respuesta">
+    <div class="fecha">{{comment.create_At}}</div>
+    <img src="img/user.jpg" class="user-res" align="left">
+    <div class="comentario-res">
+      {{comment.comment}}
+
+      <br>
+      <button onclick="voteComment({{history.idHistory}}, {{comment.idComment}}, 'dislikes')">dislike <span style="color:red" id='{{"commentDislikes" ~ comment.idComment }}'>{{comment.dislikes}}</span></button>
+      <button onclick="voteComment({{history.idHistory}}, {{comment.idComment}}, 'likes')">likes <span style="color:red" id="{{"commentLikes" ~ comment.idComment }}">{{comment.likes}}</span> </button>
+      <div class="btn-responder">Responder</div>
+    </div>
+
+  </div>
+
+  {% endfor %}
+{% endblock %}

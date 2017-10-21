@@ -1,0 +1,45 @@
+{% extends 'Template/App.twig' %}
+
+{% block history %}
+
+  {% set i = 0 %}
+    {% for history in histories %}
+      <div class="comentario" >
+
+        <form class="" action="history" id="{{"frm" ~ history.idHistory }}" method="get">
+          <h2>{{history.titleHistory}}</h2>
+          <br><a href="" class="user">Publicado por:<span class="span">{{history.userName}}</span></a>
+          <div class="fecha">{{history.create_At}}</div>
+          <div class="comentario-class" id="{{"frm" ~ history.idHistory }}" onclick="document.getElementById('{{"frm" ~ history.idHistory}}').submit()">
+            {{history.historyContent}}
+          </div>
+          <input type="hidden" name="history" value="{{history.idHistory}}">
+        </form>
+
+        <br>
+        <div class="chat-img"><h1>{{numberOfComments[i]}}</h1></div>
+        <button style="background-color: #3954a1;">Compartir</button>
+        <button style="background-color: white; color: #5e5f60;">Compatir Google</button>
+      </div>
+      {% set i = i + 1 %}
+    {% endfor %}
+
+    <div class="paginador">
+
+    
+
+    <script type="text/javascript">
+      pages = '{{result}}';
+      current = '{{page + 1}}';
+    </script>
+
+    <nav >
+        <ul class="pag" id="pagination"></ul>
+    </nav>
+    </div>
+
+    <p>&nbsp;</p>
+
+
+
+{% endblock %}

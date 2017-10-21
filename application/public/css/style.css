@@ -1,0 +1,269 @@
+body{
+	background-color: #1E1E26;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+
+}
+.section2{width: 100%;
+
+    background-color: #101216;
+height: 400px;
+}
+
+.title-1{
+  font-style:italic;
+  font-size:34px;
+  color:#379ed0;
+  width:20%;
+
+}
+.sec-cont1{
+width: 70%;
+margin-left: 20%;
+
+}
+.img-icon{
+    color:#b3d0cf;
+  width: 90px;
+  margin-left:11%;
+  margin-top: 4%;
+  float: left;
+ opacity: 0.70;
+}
+
+ .contenedorr{transition-duration: 1s;}
+ h2{color: orange;margin: 0;margin-top: -15px;opacity: 0.60;font-size: 20px;}
+ .boton{opacity: 0;}
+ .men{margin-top: 110px;
+	position: fixed;
+    width: 290px;
+    z-index: 1;
+height: 400px;
+	margin-left: 90%;
+    background-color: #101216;
+	opacity: 0;
+}
+.img-sect{width: 90%;}
+li{list-style: none;color: white;font-size: 24px;margin-left: 10%;margin-top: 4%;}
+.display{transition-duration: 1.0s;}
+
+header{background-color: #101216;
+height: 40px;}
+*{ /* -webkit-transform: rotateY(10deg); transform: rotateY(10deg); */
+    }
+nav{background-color: #161920;height: 70px;}
+/*
+li{list-style: none;color: white;
+font-size: 18px;
+background-color: rgba(178, 135, 29, 0.7);
+display: block;
+width: 100%;
+padding: 24px;
+border-right: 1px solid #101216;
+transition-duration: 1.5s;
+border-bottom: 1px solid black;
+}*/
+
+.span{font-size: 16px; color: white;margin-left:3px;margin-top: -0.3px;}
+.user{margin-top: -15px;float: left; text-decoration: none;color: white;margin-top: -48px;
+color: #A16226;}
+.user-res{width: 50px;margin-top: -20px;border-radius: 4px;opacity: 0.70;}
+.user-sec{width: 100px;margin-top: -15px;border-radius: 4px;opacity: 0.70;}
+.user:hover{opacity: 100;
+transition-duration: 0.4s;
+-moz-transform: scale(1.2);
+-webkit-transform: scale(1.2);
+transform: scale(1.2);}
+.user-sec:hover{opacity: 100;
+transition-duration: 0.4s;
+-moz-transform: scale(1.2);
+-webkit-transform: scale(1.2);
+transform: scale(1.2);}
+h1{margin-top: 10px;margin-left: -20%;font-size: 20px;}
+.chat-img{background-image:url("../img/chat4.png");
+width: 40px;
+float: right;
+height: 40px;
+margin-top: -5px;
+
+background-position: center;
+margin-right: -5%;
+  background-repeat: no-repeat;
+  background-size: cover;}
+.chat{
+    float: right;
+    margin-right: -5%;
+    margin-top: -5px;
+}
+button{
+	border: none;
+	background-color: #54421D;
+	padding: 5px;
+	padding-right: 10px;
+	padding-left: 10px;
+	color: #BFC0C1;
+	float: right;
+	margin-right: 3%;
+	margin-top: 5px;
+}
+button:hover{transition-duration: 1s;background-color: orange;}
+.redes{width: 30px;float: left;margin-left: 2%;
+margin-top: 5px;}
+.uva{width: 37px;float: left;margin-left: 2%;
+}
+.paginador{padding: 10px;margin-top: 15px;margin-left: 7%;}
+.pag{margin-left: 1%; color: white;text-decoration: none;background-color: #131419;padding: 15px;padding-left: 20px;padding-right: 20px;
+border-radius: 30px;}
+a{}
+.banner{width: 40%;background-color: red;}
+.nav{float: right;margin-top: 15px;margin-right: 20px;}
+span{float: right;margin-top: 7px;color: orange;font-size: 44px;}
+.cont-menu{float: right;opacity: 0;width: 0;margin-right: 3%;}
+.cont-header{width: 90%;}
+.cont-log{float: right;width: 30%;margin-right: 3%;}
+.log{width: 37px;float: right;margin-right: 2%;}
+section{
+	width: 70%;
+	float: right;
+
+	transition-duration: 1.5s; }
+.fecha{font-size: 12px;margin-top: -30px;float: right;color: orange;opacity: 0.50;}
+.comentario{width: 100%;
+	background-color: #161920;
+	color: #C9C9C9;padding: 5%;
+	margin-top: 2%;
+	font-size: 17px;
+	border-bottom: 1px solid #262728;
+	cursor: pointer;
+}
+
+.btn-responder{margin-top: 10px;margin-right: 55%;color: #3590A5;}
+.respuesta{width: 85%;
+    background-color: #161920;
+    color: #C9C9C9;padding: 5%;
+    margin-top: 0.5%;
+    font-size: 17px;
+    border-bottom: 1px solid #262728;
+}
+.respuesta-coment{
+    width: 78%;
+    background-color: #161920;
+    color: #C9C9C9;padding: 5%;
+    margin-top: 0.5%;
+    font-size: 17px;
+    margin-left: 7%;
+    border-bottom: 1px solid #262728;
+}
+.comentario-class{width: 100%;}
+.comentario-res{width: 80%;margin-right:  40%;margin-top: -10px;}
+.aside-left{background-color: green;
+width: 15%;
+float: right;
+opacity: 0;
+}
+.comentar-area{width: 80%;}
+.aside-rigth{background-color: green;
+width: 15%;
+opacity: 0;
+float: left;
+}
+
+/* Modal Login */
+input{width: 80%;padding: 10px;}
+label{font-size: 20px;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+textarea{width: 90%;font-size: 20px;opacity: 0.90;}
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #101216;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+/* Modal Login */
+.logueo{position: fixed;margin-left: 95%;}
+
+@media screen and (max-width: 1078px){
+.comentario{padding: 10%;}
+
+}
+@media screen and (max-width: 762px){
+.user{margin-left: -5%;}
+
+}
+@media screen and (max-width: 560px){
+    section{width: 95%;}
+.comentario{width: 100%;margin-left: -5%;}
+.aside-rigth{display: none;}
+.aside-left{display: none;}
+}
+@media screen and (max-width: 377px){
+button{
+margin-right: 1%;
+margin-top: 0px;
+padding-right: 5px;
+padding-left: 5px;
+}
+
+}
+
+.current
+{
+    background:#7cb9e5;
+}

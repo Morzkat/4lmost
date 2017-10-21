@@ -1,0 +1,101 @@
+{% extends 'Template/App.twig' %}
+
+{% block categoryBlock %}
+<section style="" class="section2" align="center">
+
+  <div class="sec-cont1" align="center"><br>
+     <h2 class="title-1" >Categorías</h2>
+       <div class="img-icon">
+        <a href="{{url ~ 'category?categoria=Picantes'}}">
+          <img src="application/public/img/chili.png" alt="Welcome" style="width: 100%;" class="efect"><br>Mas picantes
+        </a>
+       </div>
+
+      <div class="img-icon">
+        <a href="{{url ~ 'category?categoria=Favoritos'}}">
+          <img src="application/public/img/favorite.png" alt="Welcome" style="width: 100%;" class="efect"><br>Favoritos
+        </a>
+       </div>
+
+       <div class="img-icon">
+        <a href="{{url ~ 'category?categoria=AmorYAmistad'}}">
+          <img src="application/public/img/hearts.png" alt="Welcome" style="width: 100%;" class="efect"><br>Amor/Amistad
+        </a>
+       </div>
+
+       <div class="img-icon">
+        <a href="{{url ~ 'category?categoria=Salud'}}">
+          <img src="application/public/img/stethoscope.png" alt="Welcome" style="width: 100%;" class="efect"><br>Salud
+        </a>
+       </div>
+
+       <div class="img-icon">
+        <a href="{{url ~ 'category?categoria=Familia'}}">
+          <img src="application/public/img/family.png"  alt="Welcome" style="width: 100%;" class="efect"><br>Familia
+        </a>
+       </div>
+
+       <div class="img-icon">
+        <a href="{{url}}category?categoria=ramdon"}}>
+          <img src="application/public/img/dice.png" alt="Welcome" style="width: 100%;" class="efect"><br>Ramdon
+        </a>
+       </div>
+
+       <div class="img-icon">
+        <a href="{{url ~ 'category?categoria=Trabajo'}}">
+          <img src="application/public/img/briefcase.png" alt="Welcome" style="width: 100%;" class="efect"><br>Trabajo
+        </a>
+       </div>
+
+       <div class="img-icon">
+        <a href="{{url ~ 'category?categoria=Dinero'}}">
+          <img src="application/public/img/money-bag.png" alt="Welcome" style="width: 100%;" class="efect"><br>Dinero
+        </a>
+       </div>
+
+      </div>
+</section>
+{% endblock %}
+
+{% block history %}
+
+  {% set i = 0 %}
+    {% for history in histories %}
+      <div class="comentario" >
+
+        <form class="" action="history" id="{{"frm" ~ history.idHistory }}" method="get">
+          <h2>{{history.titleHistory}}</h2>
+          <br><a href="" class="user">Publicado por:<span class="span">{{history.userName}}</span></a>
+          <div class="fecha">{{history.create_At}}</div>
+          <div class="comentario-class" id="{{"frm" ~ history.idHistory }}" onclick="document.getElementById('{{"frm" ~ history.idHistory}}').submit()">
+            {{history.historyContent}}
+          </div>
+          <input type="hidden" name="history" value="{{history.idHistory}}">
+        </form>
+
+        <br>
+        <div class="chat-img"><h1>{{numberOfComments[i]}}</h1></div>
+        <button style="background-color: #3954a1;">Compartir</button>
+        <button style="background-color: white; color: #5e5f60;">Compatir Google</button>
+      </div>
+      {% set i = i + 1 %}
+    {% endfor %}
+
+    <div class="paginador">
+
+      {% if result == 0 %}
+      <a href="{{url ~ '/category?categoria=' ~ categoryName ~ '&pg=0'}}" class="current pag">1</a>
+
+      {% else %}
+        {% for i in 1.. result %}
+        {% if  i == pg + 1 %}
+        <a href="{{url ~ '/category?categoria=' ~ categoryName ~ '&pg='}} {{i - 1}}" class="current pag">{{i}}</a>
+        {% else %}
+        <a href="{{url ~ '/category?categoria=' ~ categoryName ~ '&pg='}} {{i - 1}}" class="pag">{{i}}</a>
+        {% endif %}
+
+    {% endfor %}
+    {% endif %}
+    </div>
+    <p>&nbsp;</p>
+{% endblock %}

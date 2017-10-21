@@ -1,0 +1,10 @@
+SetEnvIf Request_URI "^(/images/)$" allow
+
+Order deny,allow
+Deny from all
+
+Allow from env = allow
+Satisfy any
+<Files ~ "\.(js|css|)$">
+    Allow from all
+</Files>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <title>4lmost</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.min.css">
+  <link rel="stylesheet" type="text/css" href="application/public/css/style.css">
+  <link rel="stylesheet" type="text/css" href="application/public/css/simplePagination.css">
+
+  <!-- scripts -->
+  <script src="application/public/js/fbSDK.js" charset="utf-8"></script>
+  <script src="application/public/js/googleSDK.js" charset="utf-8"></script>
+  <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+    <script>
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '118857488774814',
+    cookie     : true,  // enable cookies to allow the server to access
+                        // the session
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.8' // use graph api version 2.8
+  });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+
+    {% block userBtns %}
+
+      <img src="application/public/img/chat.png" alt="face" class="log" id="btnWriteHistory" onclick="openModal('modalWriteHistory','btnWriteHistory')">
+      <a href="{{url}}category?categoria=ramdon"><img src="application/public/img/dice.png" alt="face" class="log" ></a>
+      <a href="{{url}}"><img src="application/public/img/house.png" alt="face" class="log"></a>
+
+      <img src="application/public/img/uva.png" alt="face" class="log" onclick="openModal('modalLogIn','btnLogIn')" id="btnLogIn">
+
+    {% endblock %}
+      <!--modals-->
+
+      <!--login-->
+      {% include 'Template/Modals/modalLogIn.html'%}
+      {% include 'Template/Modals/modalWriteHistory.html'%}
+      <!--login end-->
+
+      <div class="men">
+      	<a href="{{url}}"><li>Inicio</li></a><br>
+      	<a href="{{url}}category?categoria=ramdon"><li>Categoria</li></a><br>
+      	<li>Mas populares</li><br>
+      	<li>Endrogate</li><br>
+      	<li>vamoa huele</li><br>
+      </div>
+
+
+        <!-- JS files -->
+
+      	<header>
+      	   <center>
+
+        		<div class="cont-header">
+              <img src="application/public/img/facebook.png" alt="face" class="redes">
+        			<img src="application/public/img/instagram.png" alt="face" class="redes">
+
+        			<img src="application/public/img/uva.png" alt="face" class="uva">
+        		</div>
+
+      	 </center>
+      	</header>
+
+      	<nav>
+      	<div class="cont-menu">
+
+      	</div>
+      	<img src="application/public/img/nav.png" alt="nav" width="35px;" class="nav">
+      	<div class="banner">
+      		<span>4lmost</span>
+      	</div>
+      	</nav>
+
+        <div class="anticontenedor">
+          {% block categoryBlock %}
+          {% endblock %}
+          <center><aside class="aside-left">aa</aside>
+            <section class="coment">
+  	           {% block history %}
+               {% endblock %}
+             </section>
+             <aside class="aside-rigth">s</aside>
+           </center>
+         </div>
+
+         {% block pagination %}
+         {% endblock %}
+    <!-- js -->
+
+    <script type="text/javascript">
+
+      $(document).ready(function()
+      {
+          url = '{{url}}';
+      });
+    </script>
+
+    <script src="application/public/js/app.js" charset="utf-8"></script>
+    <script src="application/public/js/jquery.simplePagination.js" type="text/javascript"></script>
+    <script src="application/public/js/pagination.js" charset="utf-8"></script>
+    <script src="application/public/js/menuAnimation.js" charset="utf-8"></script>
+
+  </body>
+</html>
